@@ -37,12 +37,6 @@ The above snippet will create a Genesys Cloud data action called dev-dude-order-
 
 
 ## Inputs
-
-  
- 
-
-  data_action_input      = file("${path.module}/contracts/data-action-input.json") //File containing the JSON for the contract inputs
-  data_action_output     = file("${path.module}/contracts/data-action-output.json")  //File containing the JSON for the contract inputs
 | Name | Description | Type | Required |
 |------|-------------|------|:--------:|
 | <a name="environment"></a> [environment](#environment)  |  A string value used in the naming conventions to indicate what environment this lambda integration for.| `string` | yes |
@@ -52,3 +46,9 @@ The above snippet will create a Genesys Cloud data action called dev-dude-order-
 | <a name="lambda_arn"></a> [lambda_arn](#lambda\_\arn) | ARN for the AWS Lambda that the data action will invoke | `string` | yes |
 | <a name="data_action_input"></a> [data_action_input](#data\_\action\_\input) | JSON snippet containing Data Action input contracts. | `string` | yes |
 | <a name="data_action_output"></a> [data_action_output](#data\_\action\_\output) | JSON snippet containing Data Action output contracts. | `string` | yes |
+
+## Outputs
+| Name | Description | Type | 
+|------|-------------|------|
+| <a name="integration_data_action_category"></a> [integration_data_action_category](#integration_data_action_category)  |  The category name for the data action integration.| `string` |
+| <a name="integration_data_action_name"></a> [integration_data_action_name](#integration_data_action_name) |  The data action name associated with the integration | `string`|
